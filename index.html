@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="gamebox">
+        <div class="word"></div>
+        <div class="progressBar">
+            <div class="bar"></div>
+        </div>
+        <div class="playerStats">
+            <div class="guessedWordsCounter">
+                <img src="images/check.svg" alt="checkmark">
+                <div class="guessedWords">3/10</div>
+            </div>
+            <div class="livesCounter">
+                <img src="images/heart.svg" alt="heart">
+                <div class="lives">5</div>
+            </div>
+        </div>
+        <div class="levels">
+            <div onClick="switchLevel(this)" class="level easy">Easy</div>
+            <div onClick="switchLevel(this)" class="active level normal">Medium</div>
+            <div onClick="switchLevel(this)" class="level hard">Hard</div>
+        </div>
+        <div class="outOfLives">
+            <img src="images/failed.svg" alt="failed">
+            <p>You ran out of lives...</p>
+            <div class="restartGame">Play again</div>
+        </div>
+        <div class="gameOver">
+            <img src="images/victory.svg" alt="victory">
+            <p class="finalWordCount">You guessed</p>
+            <div class="restartGame">Play again</div>
+        </div>
+    </div>
+</body>
+
+</html>
